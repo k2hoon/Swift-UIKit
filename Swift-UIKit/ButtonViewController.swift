@@ -11,12 +11,9 @@ class ButtonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func buttonAction(_ sender: Any) {
-        print("hello buttons...")
     }
     
     /*

@@ -13,6 +13,8 @@
 		68981E0529FEC8F30085B887 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68981E0429FEC8F30085B887 /* TestViewController.swift */; };
 		68981E0729FEC9000085B887 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68981E0629FEC9000085B887 /* SettingsViewController.swift */; };
 		68981E0929FEC90F0085B887 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68981E0829FEC90F0085B887 /* HomeTabViewController.swift */; };
+		68A588742A34DD8E00F0A8CD /* BasicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A588732A34DD8E00F0A8CD /* BasicCollectionView.swift */; };
+		68A588762A34E5DF00F0A8CD /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A588752A34E5DF00F0A8CD /* TextViewController.swift */; };
 		68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9A295DE025005A7737 /* AppDelegate.swift */; };
 		68F2FF9D295DE025005A7737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9C295DE025005A7737 /* SceneDelegate.swift */; };
 		68F2FF9F295DE025005A7737 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9E295DE025005A7737 /* ReminderListViewController.swift */; };
@@ -50,6 +52,8 @@
 		68981E0429FEC8F30085B887 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		68981E0629FEC9000085B887 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		68981E0829FEC90F0085B887 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		68A588732A34DD8E00F0A8CD /* BasicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionView.swift; sourceTree = "<group>"; };
+		68A588752A34E5DF00F0A8CD /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		68F2FF97295DE025005A7737 /* Swift-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F2FF9A295DE025005A7737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F2FF9C295DE025005A7737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +127,9 @@
 				68F2FFA5295DE027005A7737 /* LaunchScreen.storyboard */,
 				68F2FFA8295DE027005A7737 /* Info.plist */,
 				683093AF296C7FDF00A7228A /* ButtonViewController.swift */,
+				68A588752A34E5DF00F0A8CD /* TextViewController.swift */,
 				68981E0229FEC8E70085B887 /* BasicViewController.swift */,
+				68A588732A34DD8E00F0A8CD /* BasicCollectionView.swift */,
 				68981E0429FEC8F30085B887 /* TestViewController.swift */,
 				68981E0629FEC9000085B887 /* SettingsViewController.swift */,
 				68981E0829FEC90F0085B887 /* HomeTabViewController.swift */,
@@ -291,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				68981E0529FEC8F30085B887 /* TestViewController.swift in Sources */,
+				68A588742A34DD8E00F0A8CD /* BasicCollectionView.swift in Sources */,
 				68F2FFD3295DEF1C005A7737 /* Controller+DataSource.swift in Sources */,
 				68F2FF9F295DE025005A7737 /* ReminderListViewController.swift in Sources */,
+				68A588762A34E5DF00F0A8CD /* TextViewController.swift in Sources */,
 				68981E0929FEC90F0085B887 /* HomeTabViewController.swift in Sources */,
 				683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */,
 				68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */,
