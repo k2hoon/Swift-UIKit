@@ -1,13 +1,13 @@
 //
-//  TextViewController.swift
+//  TextScrollViewController.swift
 //  Swift-UIKit
 //
-//  Created by k2hoon on 2023/06/11.
+//  Created by k2hoon on 2023/06/12.
 //
 
 import UIKit
 
-class TextViewController: UIViewController {
+class TextScrollViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     private lazy var titleLabel: UILabel = {
@@ -74,17 +74,4 @@ class TextViewController: UIViewController {
             descriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
         ])
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
-

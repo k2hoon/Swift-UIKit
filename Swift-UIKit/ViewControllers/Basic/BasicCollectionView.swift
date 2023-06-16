@@ -26,11 +26,13 @@ class BasicCollectionView: UIViewController {
     
     enum ViewType: Int, CaseIterable {
         case text
+        case textScroll
         case button
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
             case .text: return ("Text test", TextViewController())
+            case .textScroll: return ("Text scroll test", TextScrollViewController())
             case .button: return ("Button test", ButtonViewController())
             }
         }
