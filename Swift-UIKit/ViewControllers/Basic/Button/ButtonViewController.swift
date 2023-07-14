@@ -11,6 +11,8 @@ class ButtonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.navigationItem.title = "ButtonViewController"
+        self.navigationItem.largeTitleDisplayMode = .never
 
         let stack = UIStackView()
         stack.axis = .vertical
