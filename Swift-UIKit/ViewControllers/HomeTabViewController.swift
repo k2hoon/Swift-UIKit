@@ -30,45 +30,8 @@ class HomeTabViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.setTabBarAppearance()
-//        self.setTabItemAppearance()
     }
     
-    private func setTabBarAppearance() {
-        let apperance: UITabBarAppearance = UITabBarAppearance()
-        let tabBar = UITabBar.appearance()
-//        apperance.configureWithDefaultBackground()
-        apperance.configureWithTransparentBackground()
-//        apperance.configureWithOpaqueBackground()
-//        apperance.backgroundColor = UIColor.gray
-        
-        tabBar.standardAppearance = apperance
-        tabBar.scrollEdgeAppearance = apperance
-                
-//        UITabBar.appearance().isTranslucent = true
-//        UITabBar.appearance().barTintColor = .green // tab bar color
-//        UITabBar.appearance().backgroundColor = .yellow // view background color
-//        UITabBar.appearance().tintColor = .red // bar item color
-//        UITabBar.appearance().unselectedItemTintColor = .blue // unselected bar item color
-        
-//        let tabBar = UITabBar.appearance()
-//        tabBar.tintColor = .red
-//        tabBar.isTranslucent = true
-//        tabBar.backgroundColor = .gray
-    }
-    
-    private func setTabItemAppearance() {
-        let tabItem = UITabBarItem.appearance()
-        tabItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .selected)
-        tabItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .disabled)
-        tabItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], for: .normal)
-    }
-    
-    /// not working anymore after iOS 15
-    private func setTabBarTintColor() {
-        self.tabBar.barTintColor = .gray
-        self.tabBar.isTranslucent = false
-    }
 }
 
 #if canImport(SwiftUI) && DEBUG
