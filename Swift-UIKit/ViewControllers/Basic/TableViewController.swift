@@ -8,13 +8,64 @@
 import UIKit
 
 class TableViewController: UIViewController {
-    private let tests = (0...30).map { $0 }
+    enum Sections {
+        case `default`([DefaultItem])
+        case value1([Value1Item])
+        case value2([Value2Item])
+        case subtitle([SubtitleItem])
+        
+        struct DefaultItem {
+            let value: String
+        }
+        
+        struct Value1Item {
+            let value: String
+        }
+        
+        struct Value2Item {
+            let value: String
+        }
+        
+        struct SubtitleItem {
+            let value: String
+        }
+        
+        var headerTitle: String {
+            switch self {
+            case .default(_): return "Default"
+            case .value1(_): return "Value1"
+            case .value2(_): return "Value2"
+            case .subtitle(_): return "Subtitle"
+            }
+        }
+        
+        var footerTitle: String {
+            switch self {
+            case .default(_):
+                return "A simple style for a cell with a text label (black and left-aligned) and an optional image view."
+            case .value1(_):
+                return "A style for a cell with a label on the left side of the cell with left-aligned and black text; on the right side is a label that has smaller blue text and is right-aligned."
+            case .value2(_):
+                return "A style for a cell with a label on the left side of the cell with text that’s right-aligned and blue; on the right side of the cell is another label with smaller text that’s left-aligned and black."
+            case .subtitle(_):
+                return "A style for a cell with a left-aligned label across the top and a left-aligned label below it in smaller gray text."
+            }
+        }
+    }
+    
+    private let dataSource: [Sections] = [
+        .default((1...10).map(String.init).map(Sections.DefaultItem.init(value:))),
+        .value1((1...10).map(String.init).map(Sections.Value1Item.init(value:))),
+        .value2((1...10).map(String.init).map(Sections.Value2Item.init(value:))),
+        .subtitle((1...10).map(String.init).map(Sections.SubtitleItem.init(value:))),
+    ]
     
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.dataSource = self
         table.delegate = self
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
     
@@ -24,7 +75,6 @@ class TableViewController: UIViewController {
         
         // set table view auto layout.
         self.view.addSubview(self.tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -35,56 +85,80 @@ class TableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationTitleIfEmbeded()
-        self.setNavigationBar()
-        
+        self.setNavigationAppearance(largeTitle: true)
+        self.setNavigationTitle()
     }
     
-    private func setNavigationBar() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true // defulat is false
+    private func setNavigationAppearance(largeTitle: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
         let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 14)] // text can be applied when prefersLargeTitles is false
-        appearance.backgroundColor = .systemGray
+        if !largeTitle {
+            // text can be applied when prefersLargeTitles is false
+            appearance.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 14)]
+        }
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
-//        self.navigationController?.navigationBar.compactAppearance = appearance
-    }
-    
-    private func setNavigationTitleIfEmbeded() {
-        // use one of them
-        self.navigationItem.title = "!!!"
-//        self.navigationController?.navigationBar.topItem?.title = "###"
+        self.navigationController?.navigationBar.compactAppearance = appearance
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     private func setNavigationTitle() {
-//        self.title = "???" // chagne both navigation title and tab item text when navigation controller embeded in tabBar controller.
-//        self.navigationController?.title = "$$$" // change tab item text when navigation controller embeded in tabBar controller.
+        self.title = "UITable test"
     }
     
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
-    // MARK: - Table view data source
-
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.dataSource[section].headerTitle
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return self.dataSource[section].footerTitle
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tests.count
+        switch self.dataSource[section] {
+        case .default(let items): return items.count
+        case .value1(let items): return items.count
+        case .value2(let items): return items.count
+        case .subtitle(let items): return items.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(self.tests[indexPath.row])
+        var cell: UITableViewCell
+        var value: String
+        switch self.dataSource[indexPath.section] {
+        case .default(let items):
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            value = items[indexPath.row].value
+        case .value1(let items):
+            cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+            value = items[indexPath.row].value
+        case .value2(let items):
+            cell = UITableViewCell(style: .value2, reuseIdentifier: "cell")
+            value = items[indexPath.row].value
+        case .subtitle(let items):
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+            value = items[indexPath.row].value
+        }
+        
+        cell.textLabel?.text = value
+        cell.imageView?.image = UIImage(systemName: "exclamationmark.circle")
+        cell.detailTextLabel?.text = String("subtitle \(value)")
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = SecondViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-        print(indexPath.row)
+        
     }
 
     /*
@@ -123,34 +197,12 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     */
 }
 
-class SecondViewController: UIViewController {
-    private let backButton = UIButton()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initialSetup()
-    }
-    private func initialSetup() {
-        // basic setup
-        view.backgroundColor = .white
-        navigationItem.title = "Second Controller"
-        
-        // button customization
-        backButton.backgroundColor = .darkGray
-        backButton.setTitle("Go Back", for: .normal)
-        backButton.setTitleColor(.white, for: .normal)
-        backButton.layer.cornerRadius = 8
-        backButton.addTarget(self, action: #selector(handleBackButtonTapped), for: .touchUpInside)
-        
-        // adding constraint to button
-        view.addSubview(backButton)
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        backButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        backButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-    
-    @objc private func handleBackButtonTapped() {
-        self.navigationController?.popViewController(animated: true)
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct TableViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        TableViewController().toPreview()
     }
 }
+#endif

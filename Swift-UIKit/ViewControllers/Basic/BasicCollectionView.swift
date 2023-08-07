@@ -16,6 +16,7 @@ class BasicCollectionView: UIViewController {
         case button
         case vstack
         case hstack
+        case tableview
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
@@ -24,6 +25,7 @@ class BasicCollectionView: UIViewController {
             case .button: return ("Button test", ButtonViewController())
             case .vstack: return ("VStack", VStackViewController())
             case .hstack: return ("HStack", HStackViewController())
+            case .tableview: return ("Table", TableViewController())
             }
         }
     }
