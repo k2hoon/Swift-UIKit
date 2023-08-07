@@ -65,8 +65,35 @@ class TableViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(TableViewHeader.self, forHeaderFooterViewReuseIdentifier: "section")
+        table.sectionHeaderTopPadding = 0
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
+    }()
+    
+    private lazy var headerView: UIView = {
+        let view = UIView(frame: .init(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        view.backgroundColor = .darkGray
+        
+        let label = UILabel(frame: view.bounds)
+        label.text = "Header view"
+        label.textAlignment = .center
+        
+        view.addSubview(label)
+        return view
+    }()
+    
+    
+    private lazy var footerView: UIView = {
+        let view = UIView(frame: .init(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        view.backgroundColor = .darkGray
+        
+        let label = UILabel(frame: view.bounds)
+        label.text = "Footer view"
+        label.textAlignment = .center
+        
+        view.addSubview(label)
+        return view
     }()
     
     override func viewDidLoad() {
@@ -81,6 +108,10 @@ class TableViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
+        
+        // add header and footer view
+        tableView.tableHeaderView = headerView
+        tableView.tableFooterView = footerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,7 +130,6 @@ class TableViewController: UIViewController {
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
         self.navigationController?.navigationBar.compactAppearance = appearance
-        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     private func setNavigationTitle() {
@@ -114,8 +144,23 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         return self.dataSource.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.dataSource[section].headerTitle
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "section") as? TableViewHeader else {
+            return nil
+        }
+        
+        let view: UIView = {
+            let v = UIView(frame: .zero)
+            v.backgroundColor = .gray
+            return v
+        }()
+        
+        header.title.text = self.dataSource[section].headerTitle
+        header.title.textAlignment = .center
+        header.title.textColor = .white
+        header.backgroundView = view
+
+        return header
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
@@ -195,6 +240,39 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         return true
     }
     */
+}
+
+extension TableViewController {
+    class TableViewHeader: UITableViewHeaderFooterView {
+        var title: UILabel = {
+            let label = UILabel()
+            label.textColor = .black
+            label.adjustsFontForContentSizeCategory = true
+            label.font = .preferredFont(forTextStyle: .body)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+        
+        override init(reuseIdentifier: String?) {
+            super.init(reuseIdentifier: reuseIdentifier)
+            setupViews()
+        }
+        
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        private func setupViews() {
+            self.contentView.addSubview(title)
+            NSLayoutConstraint.activate([
+                title.topAnchor.constraint(equalTo: contentView.topAnchor),
+                title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+                title.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+                title.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+                title.heightAnchor.constraint(equalToConstant: 50),
+            ])
+        }
+    }
 }
 
 #if canImport(SwiftUI) && DEBUG
