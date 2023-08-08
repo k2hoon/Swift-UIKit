@@ -14,6 +14,7 @@
 		6815D7E32A3D4BC60036983D /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7E22A3D4BC60036983D /* CustomTableViewController.swift */; };
 		6815D7E52A3D4BE50036983D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */; };
 		683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683093AF296C7FDF00A7228A /* ButtonViewController.swift */; };
+		68602E642A829B4F001349C8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68602E632A829B4F001349C8 /* AlertViewController.swift */; };
 		68665AF02A60FD4C006120E0 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */; };
 		68665AF22A618134006120E0 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF12A618134006120E0 /* UIControl+.swift */; };
 		68665AF62A618E2C006120E0 /* CompisiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF52A618E2C006120E0 /* CompisiteViewController.swift */; };
@@ -69,6 +70,7 @@
 		6815D7E22A3D4BC60036983D /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		683093AF296C7FDF00A7228A /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		68602E632A829B4F001349C8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
 		68665AF12A618134006120E0 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
 		68665AF52A618E2C006120E0 /* CompisiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompisiteViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				68665AFB2A6199E1006120E0 /* Stack */,
 				6815D7E22A3D4BC60036983D /* CustomTableViewController.swift */,
 				6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */,
+				68602E632A829B4F001349C8 /* AlertViewController.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				68A588762A34E5DF00F0A8CD /* TextViewController.swift in Sources */,
 				68665AF02A60FD4C006120E0 /* BasicCollectionViewCell.swift in Sources */,
 				68665AF82A6193E2006120E0 /* HStackViewController.swift in Sources */,
+				68602E642A829B4F001349C8 /* AlertViewController.swift in Sources */,
 				68E3BB512A82928600874745 /* ButtonCornerViewController.swift in Sources */,
 				68981E0929FEC90F0085B887 /* HomeTabViewController.swift in Sources */,
 				6815D7E12A3D4B7A0036983D /* TableViewController.swift in Sources */,
