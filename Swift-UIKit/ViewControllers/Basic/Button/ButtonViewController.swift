@@ -8,134 +8,81 @@
 import UIKit
 
 class ButtonViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .white
-        self.navigationItem.title = "ButtonViewController"
-        self.navigationItem.largeTitleDisplayMode = .never
-
+    private lazy var stackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.distribution = .fill
-        stack.spacing = 30
+        stack.distribution = .fillEqually
+        stack.spacing = 10
         stack.alignment = .center
-        
-        self.view.addSubview(stack)
         stack.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stack
+    }()
+    
+    private var buttons: [UIButton] {
+        [
+            getButton(title: "Bordered", with: .bordered()),
+            getButton(title: "Bordered Prominent", with: .borderedProminent()),
+            getButton(title: "Bordered Tinted", with: .borderedTinted()),
+            getButton(title: "Borderless", with: .borderless()),
+            getButton(title: "Filled", with: .filled()),
+            getButton(title: "Gray", with: .gray()),
+            getButton(title: "Plain", with: .plain()),
+            getButton(title: "Tinted", with: .tinted()),
+        ]
+    }
+    
+    private let configHandler: UIButton.ConfigurationUpdateHandler = { button in
+        switch button.state {
+        case .selected, .highlighted:
+            button.configuration?.title = "select and highlight"
+        case .selected:
+            button.configuration?.title = "Selected"
+        case .highlighted:
+            button.configuration?.title = "Highlighted"
+        case .disabled:
+            button.configuration?.title = "Disabled"
+        default:
+            break
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = .white
+        self.setNavigationTitle(title: "ButtonViewController")
+    }
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addSubview(self.stackView)
+        
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stack.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            stack.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            stackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            stackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
         ])
         
-        stack.addArrangedSubview(setDefaultButton())
-        stack.addArrangedSubview(setFilledButton())
-        stack.addArrangedSubview(setTintedButton())
-        stack.addArrangedSubview(setGrayButton())
-        stack.addArrangedSubview(setPlainButton())
-        stack.addArrangedSubview(setBorderlessButton())
-        stack.addArrangedSubview(setBorderedButton())
-        stack.addArrangedSubview(setBorderedTintedButton())
-        stack.addArrangedSubview(setBorderedProminentButton())
-        
+        self.buttons.forEach { button in
+            stackView.addArrangedSubview(button)
+        }
     }
     
-    func setDefaultButton() -> UIButton {
-        let button = UIButton()
-        button.setTitle("Button", for: .normal)
-        button.setImage(UIImage(systemName: "star.fill"), for: .normal)
-        button.backgroundColor = .darkGray
-        button.layer.borderColor = UIColor.red.cgColor
-        button.layer.borderWidth = 2
-        button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-
-        return button
-    }
-    
-    func setFilledButton() -> UIButton {
-        var config = UIButton.Configuration.filled()
-        config.title = "Title"
-        config.subtitle = "Subtitle"
+    func getButton(title: String = "Title", subtitle: String = "Subtitle", with configuration: UIButton.Configuration) -> UIButton {
+        var config = configuration
+        config.title = title
+        config.subtitle = subtitle
         config.image = UIImage(systemName: "swift")
         config.titlePadding = 10
         config.imagePadding = 10
-
-        return UIButton(configuration: config)
-    }
-    
-    
-    func setTintedButton() -> UIButton {
-        var config = UIButton.Configuration.tinted()
-        var container = AttributeContainer()
-        container.font = UIFont.boldSystemFont(ofSize: 20)
-        config.attributedTitle = AttributedString("Title", attributes: container)
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
-
-        return UIButton(configuration: config)
-    }
-    
-    func setGrayButton() -> UIButton {
-        var config = UIButton.Configuration.gray()
-        var container = AttributeContainer()
-        container.font = UIFont.boldSystemFont(ofSize: 20)
-        config.attributedSubtitle = AttributedString("Subtitle", attributes: container)
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
-
-        return UIButton(configuration: config)
-    }
-    
-
-    func setPlainButton() -> UIButton {
-        var config = UIButton.Configuration.plain()
-        var container = AttributeContainer()
-        container.font = UIFont.boldSystemFont(ofSize: 20)
-        config.attributedSubtitle = AttributedString("Subtitle", attributes: container)
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
-
-        return UIButton(configuration: config)
-    }
-    
-    func setBorderlessButton() -> UIButton {
-        var config = UIButton.Configuration.borderless()
-        config.image = UIImage(systemName: "swift")
-        config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: 30)
-        config.imagePadding = 10
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+        config.contentInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)
         
-        return UIButton(configuration: config)
-    }
-    
-    func setBorderedButton() -> UIButton {
-        var config = UIButton.Configuration.bordered()
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         let button = UIButton(configuration: config)
-        button.setTitle("Button", for: .normal)
-        button.backgroundColor = .red
-        return button
-    }
-    
-    func setBorderedTintedButton() -> UIButton {
-        var config = UIButton.Configuration.borderedTinted()
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
-        let button = UIButton(configuration: config)
-        button.setTitle("Button", for: .normal)
-        return button
-    }
-    
-    func setBorderedProminentButton() -> UIButton {
-        var config = UIButton.Configuration.borderedProminent()
-        config.baseBackgroundColor = .darkGray
-        config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
-        config.cornerStyle = .dynamic
-        config.background.cornerRadius = 10
-        let button = UIButton(configuration: config)
-        button.setTitle("Button", for: .normal)
+        button.configurationUpdateHandler = configHandler
+        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderWidth = 1
+        
         return button
     }
 }
