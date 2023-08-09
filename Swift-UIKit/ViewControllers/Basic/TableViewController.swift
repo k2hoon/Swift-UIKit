@@ -96,9 +96,24 @@ class TableViewController: UIViewController {
         return view
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = .white
+        
+        // add navigationbar item
+        self.navigationItem.largeTitleDisplayMode = .never
+        self.navigationItem.title = "TableViewController"
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "gearshape.fill"),
+                            style:.plain,
+                            target: self,
+                            action: #selector(onClickOptionButton)),
+        ]
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
         
         // set table view auto layout.
         self.view.addSubview(self.tableView)
@@ -114,28 +129,9 @@ class TableViewController: UIViewController {
         tableView.tableFooterView = footerView
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationAppearance(largeTitle: true)
-        self.setNavigationTitle()
+    @objc func onClickOptionButton() {
+        
     }
-    
-    private func setNavigationAppearance(largeTitle: Bool) {
-        self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
-        let appearance = UINavigationBarAppearance()
-        if !largeTitle {
-            // text can be applied when prefersLargeTitles is false
-            appearance.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 14)]
-        }
-        self.navigationController?.navigationBar.standardAppearance = appearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        self.navigationController?.navigationBar.compactAppearance = appearance
-    }
-    
-    private func setNavigationTitle() {
-        self.title = "UITable test"
-    }
-    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
