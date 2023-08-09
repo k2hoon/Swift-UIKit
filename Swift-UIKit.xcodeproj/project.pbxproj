@@ -32,6 +32,8 @@
 		68E3BB4D2A828D6F00874745 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3BB4C2A828D6F00874745 /* UIViewController+.swift */; };
 		68E3BB4F2A828E1800874745 /* ButtonFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3BB4E2A828E1800874745 /* ButtonFontViewController.swift */; };
 		68E3BB512A82928600874745 /* ButtonCornerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3BB502A82928600874745 /* ButtonCornerViewController.swift */; };
+		68F0D08B2A829FD90021DD6D /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0D08A2A829FD90021DD6D /* PickerViewController.swift */; };
+		68F0D08D2A82A49F0021DD6D /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0D08C2A82A49F0021DD6D /* PickerInputViewController.swift */; };
 		68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9A295DE025005A7737 /* AppDelegate.swift */; };
 		68F2FF9D295DE025005A7737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9C295DE025005A7737 /* SceneDelegate.swift */; };
 		68F2FF9F295DE025005A7737 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9E295DE025005A7737 /* ReminderListViewController.swift */; };
@@ -88,6 +90,8 @@
 		68E3BB4C2A828D6F00874745 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		68E3BB4E2A828E1800874745 /* ButtonFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFontViewController.swift; sourceTree = "<group>"; };
 		68E3BB502A82928600874745 /* ButtonCornerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCornerViewController.swift; sourceTree = "<group>"; };
+		68F0D08A2A829FD90021DD6D /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		68F0D08C2A82A49F0021DD6D /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
 		68F2FF97295DE025005A7737 /* Swift-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F2FF9A295DE025005A7737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F2FF9C295DE025005A7737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				6815D7E22A3D4BC60036983D /* CustomTableViewController.swift */,
 				6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */,
 				68602E632A829B4F001349C8 /* AlertViewController.swift */,
+				68F0D08E2A82A4A50021DD6D /* Picker */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -196,6 +201,15 @@
 				68665AF92A6199DC006120E0 /* VStackViewController.swift */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		68F0D08E2A82A4A50021DD6D /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				68F0D08A2A829FD90021DD6D /* PickerViewController.swift */,
+				68F0D08C2A82A49F0021DD6D /* PickerInputViewController.swift */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 		68F2FF8E295DE025005A7737 = {
@@ -402,6 +416,7 @@
 				6815D7E52A3D4BE50036983D /* CustomTableViewCell.swift in Sources */,
 				68E3BB4D2A828D6F00874745 /* UIViewController+.swift in Sources */,
 				68F2FF9F295DE025005A7737 /* ReminderListViewController.swift in Sources */,
+				68F0D08D2A82A49F0021DD6D /* PickerInputViewController.swift in Sources */,
 				6815D7DB2A3D0A9B0036983D /* PreviewProvider.swift in Sources */,
 				68665AFA2A6199DC006120E0 /* VStackViewController.swift in Sources */,
 				68E3BB4B2A82858700874745 /* ButtonTypeViewController.swift in Sources */,
@@ -411,6 +426,7 @@
 				68602E642A829B4F001349C8 /* AlertViewController.swift in Sources */,
 				68E3BB512A82928600874745 /* ButtonCornerViewController.swift in Sources */,
 				68981E0929FEC90F0085B887 /* HomeTabViewController.swift in Sources */,
+				68F0D08B2A829FD90021DD6D /* PickerViewController.swift in Sources */,
 				6815D7E12A3D4B7A0036983D /* TableViewController.swift in Sources */,
 				683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */,
 				68665AF22A618134006120E0 /* UIControl+.swift in Sources */,
