@@ -17,6 +17,7 @@ class BasicCollectionView: UIViewController {
         case vstack
         case hstack
         case tableview
+        case picker
         case alert
         
         var viewValue: (title: String, vc: UIViewController) {
@@ -27,6 +28,7 @@ class BasicCollectionView: UIViewController {
             case .vstack: return ("VStack", VStackViewController())
             case .hstack: return ("HStack", HStackViewController())
             case .tableview: return ("Table", TableViewController())
+            case .picker: return ("Picker", PickerInputViewController())
             case .alert: return ("Alert", AlertViewController())
             }
         }
