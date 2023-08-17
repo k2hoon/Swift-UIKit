@@ -33,7 +33,7 @@ class ButtonFontViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = .white
-        self.setNavigationTitle(title: "ButtonViewController")
+        self.setNavigationTitle(title: "Button Font")
     }
     
     override func viewDidLoad() {
@@ -41,6 +41,8 @@ class ButtonFontViewController: UIViewController {
         self.view.addSubview(self.stackView)
         
         NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             stackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
         ])

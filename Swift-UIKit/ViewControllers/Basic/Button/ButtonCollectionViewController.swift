@@ -13,6 +13,8 @@ class ButtonCollectionViewController: UIViewController {
         case type
         case font
         case conrner
+        case toggle
+        case `switch`
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
@@ -20,6 +22,8 @@ class ButtonCollectionViewController: UIViewController {
             case .type: return ("Button type", ButtonTypeViewController())
             case .font: return ("Button with font", ButtonFontViewController())
             case .conrner: return ("Button corner", ButtonCornerViewController())
+            case .toggle: return ("Button Toggle", ButtonToggleViewController())
+            case .switch: return ("Button Switch", ButtonSwitchViewController())
             }
         }
     }
@@ -120,7 +124,7 @@ extension ButtonCollectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let viewValue = self.dataSource[indexPath.item].viewValue
-        
+        cell.selectionStyle = .none
         cell.textLabel?.text = viewValue.title
         return cell
     }

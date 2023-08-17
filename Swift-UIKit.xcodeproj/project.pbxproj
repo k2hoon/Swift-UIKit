@@ -15,6 +15,8 @@
 		6815D7E52A3D4BE50036983D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */; };
 		683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683093AF296C7FDF00A7228A /* ButtonViewController.swift */; };
 		684F50132A8E84E00032985D /* ButtonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F50122A8E84E00032985D /* ButtonCollectionViewController.swift */; };
+		684F50152A8E936D0032985D /* ButtonToggleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F50142A8E936C0032985D /* ButtonToggleViewController.swift */; };
+		684F50172A8E9C9D0032985D /* ButtonSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F50162A8E9C9D0032985D /* ButtonSwitchViewController.swift */; };
 		68602E642A829B4F001349C8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68602E632A829B4F001349C8 /* AlertViewController.swift */; };
 		68665AF02A60FD4C006120E0 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */; };
 		68665AF22A618134006120E0 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF12A618134006120E0 /* UIControl+.swift */; };
@@ -73,6 +75,8 @@
 		6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		683093AF296C7FDF00A7228A /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		684F50122A8E84E00032985D /* ButtonCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewController.swift; sourceTree = "<group>"; };
+		684F50142A8E936C0032985D /* ButtonToggleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonToggleViewController.swift; sourceTree = "<group>"; };
+		684F50162A8E9C9D0032985D /* ButtonSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitchViewController.swift; sourceTree = "<group>"; };
 		68602E632A829B4F001349C8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
 		68665AF12A618134006120E0 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				68E3BB4A2A82858700874745 /* ButtonTypeViewController.swift */,
 				68E3BB4E2A828E1800874745 /* ButtonFontViewController.swift */,
 				68E3BB502A82928600874745 /* ButtonCornerViewController.swift */,
+				684F50142A8E936C0032985D /* ButtonToggleViewController.swift */,
+				684F50162A8E9C9D0032985D /* ButtonSwitchViewController.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				68665AF62A618E2C006120E0 /* CompisiteViewController.swift in Sources */,
 				68F2FFD3295DEF1C005A7737 /* Controller+DataSource.swift in Sources */,
 				6815D7E52A3D4BE50036983D /* CustomTableViewCell.swift in Sources */,
+				684F50152A8E936D0032985D /* ButtonToggleViewController.swift in Sources */,
 				68E3BB4D2A828D6F00874745 /* UIViewController+.swift in Sources */,
 				684F50132A8E84E00032985D /* ButtonCollectionViewController.swift in Sources */,
 				68F2FF9F295DE025005A7737 /* ReminderListViewController.swift in Sources */,
@@ -430,6 +437,7 @@
 				68F0D08B2A829FD90021DD6D /* PickerViewController.swift in Sources */,
 				6815D7E12A3D4B7A0036983D /* TableViewController.swift in Sources */,
 				683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */,
+				684F50172A8E9C9D0032985D /* ButtonSwitchViewController.swift in Sources */,
 				68665AF22A618134006120E0 /* UIControl+.swift in Sources */,
 				68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */,
 				6815D7DF2A3D292B0036983D /* UIScreen+.swift in Sources */,
