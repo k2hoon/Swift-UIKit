@@ -23,6 +23,7 @@
 		684F501F2A8EAA4F0032985D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F501E2A8EAA4F0032985D /* TextFieldViewController.swift */; };
 		684F50212A8EAABF0032985D /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F50202A8EAABF0032985D /* UILabel+.swift */; };
 		684F50232A8EAB720032985D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F50222A8EAB720032985D /* UITextField+.swift */; };
+		684F50252A8EADEC0032985D /* UISegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684F50242A8EADEC0032985D /* UISegmentViewController.swift */; };
 		68602E642A829B4F001349C8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68602E632A829B4F001349C8 /* AlertViewController.swift */; };
 		68665AF02A60FD4C006120E0 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */; };
 		68665AF22A618134006120E0 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF12A618134006120E0 /* UIControl+.swift */; };
@@ -89,6 +90,7 @@
 		684F501E2A8EAA4F0032985D /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		684F50202A8EAABF0032985D /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		684F50222A8EAB720032985D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		684F50242A8EADEC0032985D /* UISegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentViewController.swift; sourceTree = "<group>"; };
 		68602E632A829B4F001349C8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
 		68665AF12A618134006120E0 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */,
 				68602E632A829B4F001349C8 /* AlertViewController.swift */,
 				68F0D08E2A82A4A50021DD6D /* Picker */,
+				684F50242A8EADEC0032985D /* UISegmentViewController.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				68981E0929FEC90F0085B887 /* HomeTabViewController.swift in Sources */,
 				68F0D08B2A829FD90021DD6D /* PickerViewController.swift in Sources */,
 				6815D7E12A3D4B7A0036983D /* TableViewController.swift in Sources */,
+				684F50252A8EADEC0032985D /* UISegmentViewController.swift in Sources */,
 				683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */,
 				684F50172A8E9C9D0032985D /* ButtonSwitchViewController.swift in Sources */,
 				68665AF22A618134006120E0 /* UIControl+.swift in Sources */,
