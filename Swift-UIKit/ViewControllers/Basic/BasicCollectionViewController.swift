@@ -1,5 +1,5 @@
 //
-//  BasicCollectionView.swift
+//  BasicCollectionViewController.swift
 //  Swift-UIKit
 //
 //  Created by k2hoon on 2023/06/11.
@@ -7,9 +7,7 @@
 
 import UIKit
 
-class BasicCollectionView: UIViewController {
-    static let identifier = "BasicCollectionView"
-    
+class BasicCollectionViewController: UIViewController {
     enum ViewType: Int, CaseIterable {
         case text
         case textScroll
@@ -24,7 +22,7 @@ class BasicCollectionView: UIViewController {
             switch self {
             case .text: return ("Text", TextViewController())
             case .textScroll: return ("Text scroll", TextScrollViewController())
-            case .button: return ("Button test", ButtonViewController())
+            case .button: return ("Button", ButtonCollectionViewController())
             case .vstack: return ("VStack", VStackViewController())
             case .hstack: return ("HStack", HStackViewController())
             case .tableview: return ("Table", TableViewController())
@@ -33,8 +31,6 @@ class BasicCollectionView: UIViewController {
             }
         }
     }
-    
-    private let dataSource: [ViewType] = ViewType.allCases
     
     private lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
@@ -45,12 +41,22 @@ class BasicCollectionView: UIViewController {
         return collection
     }()
     
+    private let dataSource: [ViewType] = ViewType.allCases
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Basic Collection"
+        self.navigationController?.navigationBar.prefersLargeTitles = true // defulat is false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.layoutCollectionView()
+    }
+    
+    private func layoutCollectionView() {
         self.view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
@@ -59,18 +65,9 @@ class BasicCollectionView: UIViewController {
         ])
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNavigationTitle()
-    }
-    
-    private func setNavigationTitle() {
-        self.title = "BasicCollectionView"
-        self.navigationController?.navigationBar.prefersLargeTitles = true // defulat is false
-    }
 }
 
-extension BasicCollectionView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension BasicCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 1.0, left: 8.0, bottom: 1.0, right: 8.0)
     }
@@ -95,13 +92,18 @@ extension BasicCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCollectionViewCell.identifier, for: indexPath) as! BasicCollectionViewCell
         
-        let viewValue = self.dataSource[indexPath.item].viewValue
-        cell.setLabel(text: viewValue.title)
+        let viewType = self.dataSource[indexPath.item]
+        cell.setLabel(text: viewType.viewValue.title)
         cell.button.addAction { [weak self] in
-            self?.navigationController?.pushViewController(viewValue.vc, animated: true)
+            if viewType == .button {
+                let vc = UINavigationController(rootViewController: viewType.viewValue.vc)
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc, animated: true)
+            } else {
+                self?.navigationController?.pushViewController(viewType.viewValue.vc, animated: true)
+            }            
         }
         return cell
     }
@@ -110,10 +112,10 @@ extension BasicCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct BasicCollectionView_Preview: PreviewProvider {
+struct BasicCollectionViewController_Preview: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            BasicCollectionView().toPreview()
+            BasicCollectionViewController().toPreview()
         }
     }
 }
