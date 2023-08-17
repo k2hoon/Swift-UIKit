@@ -11,6 +11,7 @@ class BasicCollectionViewController: UIViewController {
     enum ViewType: Int, CaseIterable {
         case text
         case textScroll
+        case textField
         case button
         case vstack
         case hstack
@@ -22,6 +23,7 @@ class BasicCollectionViewController: UIViewController {
             switch self {
             case .text: return ("Text", TextViewController())
             case .textScroll: return ("Text scroll", TextScrollViewController())
+            case .textField: return ("Text Field", TextFieldViewController())
             case .button: return ("Button", ButtonCollectionViewController())
             case .vstack: return ("VStack", VStackViewController())
             case .hstack: return ("HStack", HStackViewController())
