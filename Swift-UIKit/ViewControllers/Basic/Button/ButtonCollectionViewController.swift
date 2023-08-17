@@ -15,6 +15,9 @@ class ButtonCollectionViewController: UIViewController {
         case conrner
         case toggle
         case `switch`
+        case popup
+        case pulldown
+        case contextMenu
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
@@ -24,6 +27,9 @@ class ButtonCollectionViewController: UIViewController {
             case .conrner: return ("Button corner", ButtonCornerViewController())
             case .toggle: return ("Button Toggle", ButtonToggleViewController())
             case .switch: return ("Button Switch", ButtonSwitchViewController())
+            case .popup: return ("Button Popup", ButtonPopUpViewController())
+            case .pulldown: return ("Button Pulldown", ButtonPullDownViewController())
+            case .contextMenu: return ("Button Context Menu", ButtonContextMenuViewController())
             }
         }
     }
