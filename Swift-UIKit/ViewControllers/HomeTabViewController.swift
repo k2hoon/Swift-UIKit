@@ -9,11 +9,15 @@ import UIKit
 
 class HomeTabViewController: UITabBarController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        let basicVC = BasicViewController()
+        let basicVC = UINavigationController(rootViewController: BasicCollectionViewController())
         basicVC.tabBarItem = UITabBarItem(title: "Basic", image: UIImage(systemName: "square.text.square"), tag: 0)
         
         let testVC = UINavigationController(rootViewController: TestViewController())
@@ -26,10 +30,6 @@ class HomeTabViewController: UITabBarController {
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 3)
         
         self.viewControllers = [basicVC, advancedVC, testVC, settingsVC]
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
     
 }
