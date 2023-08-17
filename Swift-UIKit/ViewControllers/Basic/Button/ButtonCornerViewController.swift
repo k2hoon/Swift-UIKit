@@ -33,7 +33,7 @@ class ButtonCornerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = .white
-        self.setNavigationTitle(title: "ButtonViewController")
+        self.setNavigationTitle(title: "Button Corner")
     }
     
     override func viewDidLoad() {

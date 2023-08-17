@@ -32,6 +32,8 @@ class ButtonTypeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.backgroundColor = .white
+        self.setNavigationTitle(title: "Button Type")
     }
     
     override func viewDidLoad() {
