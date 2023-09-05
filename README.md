@@ -9,7 +9,7 @@
 - Swift 5+
 
 ## Features
-- [ ] Text (UILabel)
+- [x] Text (UILabel)
 - [x] Button
 - [x] PopUp Button
 - [x] PullDown Button
