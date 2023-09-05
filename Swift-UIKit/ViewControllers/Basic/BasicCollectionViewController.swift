@@ -9,8 +9,7 @@ import UIKit
 
 class BasicCollectionViewController: UIViewController {
     enum ViewType: Int, CaseIterable {
-        case text
-        case textScroll
+        case label
         case textField
         case button
         case vstack
@@ -22,8 +21,7 @@ class BasicCollectionViewController: UIViewController {
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
-            case .text: return ("Text", TextViewController())
-            case .textScroll: return ("Text scroll", TextScrollViewController())
+            case .label: return ("Label(Text)", LabelCollectionViewController())
             case .textField: return ("Text Field", TextFieldViewController())
             case .button: return ("Button", ButtonCollectionViewController())
             case .vstack: return ("VStack", VStackViewController())
@@ -101,7 +99,7 @@ extension BasicCollectionViewController: UICollectionViewDelegate, UICollectionV
         let viewType = self.dataSource[indexPath.item]
         cell.setLabel(text: viewType.viewValue.title)
         cell.button.addAction { [weak self] in
-            if viewType == .button {
+            if viewType == .button || viewType == .label {
                 let vc = UINavigationController(rootViewController: viewType.viewValue.vc)
                 vc.modalPresentationStyle = .fullScreen
                 self?.present(vc, animated: true)
