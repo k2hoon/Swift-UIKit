@@ -1,5 +1,5 @@
 //
-//  TextScrollViewController.swift
+//  LabelScrollViewController.swift
 //  Swift-UIKit
 //
 //  Created by k2hoon on 2023/06/12.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TextScrollViewController: UIViewController {
+class LabelScrollViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     private lazy var titleLabel: UILabel = {
@@ -35,11 +35,13 @@ class TextScrollViewController: UIViewController {
     
     private func setupScrollView() {
         self.view.addSubview(scrollView)
+        self.scrollView.layer.borderColor = UIColor.red.cgColor
+        self.scrollView.layer.borderWidth = 1.0
         self.scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             self.scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            self.scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            self.scrollView.heightAnchor.constraint(equalToConstant: 300),
             self.scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             self.scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
@@ -54,6 +56,7 @@ class TextScrollViewController: UIViewController {
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            // contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor), // use supporting for vertical scroll
         ])
     }
     
@@ -75,3 +78,13 @@ class TextScrollViewController: UIViewController {
         ])
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct TextScrollViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        LabelScrollViewController().toPreview()
+    }
+}
+#endif
