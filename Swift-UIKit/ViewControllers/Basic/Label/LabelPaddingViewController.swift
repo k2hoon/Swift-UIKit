@@ -58,7 +58,9 @@ import SwiftUI
 
 struct UILabelViewController_Preview: PreviewProvider {
     static var previews: some View {
-        LabelPaddingViewController().toPreview()
+        UIViewControllerPreview {
+            LabelPaddingViewController()
+        }
     }
 }
 #endif

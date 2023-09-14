@@ -276,7 +276,9 @@ import SwiftUI
 
 struct TableViewController_Preview: PreviewProvider {
     static var previews: some View {
-        TableViewController().toPreview()
+        UIViewControllerPreview {
+            TableViewController()   
+        }
     }
 }
 #endif

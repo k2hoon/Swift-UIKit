@@ -194,7 +194,9 @@ import SwiftUI
 
 struct PickerInputViewController_Preview: PreviewProvider {
     static var previews: some View {
-        PickerInputViewController().toPreview()
+        UIViewControllerPreview {
+            PickerInputViewController()
+        }
     }
 }
 #endif

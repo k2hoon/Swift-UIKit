@@ -60,7 +60,9 @@ import SwiftUI
 
 struct HStackViewController_Preview: PreviewProvider {
     static var previews: some View {
-        HStackViewController().toPreview()
+        UIViewControllerPreview {
+            HStackViewController()
+        }
     }
 }
 #endif

@@ -40,7 +40,9 @@ import SwiftUI
 
 struct TextViewController_Preview: PreviewProvider {
     static var previews: some View {
-        LabelViewController().toPreview()
+        UIViewControllerPreview {
+            LabelViewController()
+        }
     }
 }
 #endif

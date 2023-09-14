@@ -135,7 +135,9 @@ import SwiftUI
 
 struct AlertViewController_Preview: PreviewProvider {
     static var previews: some View {
-        AlertViewController().toPreview()
+        UIViewControllerPreview {
+            AlertViewController()
+        }
     }
 }
 #endif

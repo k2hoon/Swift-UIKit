@@ -134,7 +134,9 @@ import SwiftUI
 
 struct TextCollectionViewController_Preview: PreviewProvider {
     static var previews: some View {
-        LabelCollectionViewController().toPreview()
+        UIViewControllerPreview {
+            LabelCollectionViewController()
+        }
     }
 }
 #endif

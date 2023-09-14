@@ -84,7 +84,7 @@ extension BasicCollectionViewController: UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 4
     }
@@ -116,8 +116,8 @@ import SwiftUI
 
 struct BasicCollectionViewController_Preview: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            BasicCollectionViewController().toPreview()
+        UIViewControllerPreview {
+            UINavigationController(rootViewController: BasicCollectionViewController())
         }
     }
 }
