@@ -112,7 +112,9 @@ import SwiftUI
 
 struct TextFieldViewController_Preview: PreviewProvider {
     static var previews: some View {
-        TextFieldViewController().toPreview()
+        UIViewControllerPreview {
+            TextFieldViewController()
+        }
     }
 }
 #endif

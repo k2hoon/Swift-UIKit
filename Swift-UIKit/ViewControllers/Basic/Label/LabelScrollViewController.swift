@@ -84,7 +84,9 @@ import SwiftUI
 
 struct TextScrollViewController_Preview: PreviewProvider {
     static var previews: some View {
-        LabelScrollViewController().toPreview()
+        UIViewControllerPreview {
+            LabelScrollViewController()
+        }
     }
 }
 #endif

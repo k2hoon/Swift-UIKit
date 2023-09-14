@@ -140,7 +140,9 @@ import SwiftUI
 
 struct ButtonToggleViewController_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonToggleViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonToggleViewController()
+        }
     }
 }
 #endif

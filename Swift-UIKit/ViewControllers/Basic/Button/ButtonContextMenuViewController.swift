@@ -61,7 +61,9 @@ import SwiftUI
 
 struct ButtonContextMenuViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonContextMenuViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonContextMenuViewController()
+        }
     }
 }
 #endif

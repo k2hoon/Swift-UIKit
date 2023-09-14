@@ -86,7 +86,9 @@ import SwiftUI
 
 struct PickerViewController_Preview: PreviewProvider {
     static var previews: some View {
-        PickerViewController().toPreview()
+        UIViewControllerPreview {
+            PickerViewController()
+        }
     }
 }
 #endif

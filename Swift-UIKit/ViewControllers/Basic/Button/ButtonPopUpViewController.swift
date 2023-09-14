@@ -45,7 +45,9 @@ import SwiftUI
 
 struct ButtonPopUpViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonPopUpViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonPopUpViewController()
+        }
     }
 }
 #endif

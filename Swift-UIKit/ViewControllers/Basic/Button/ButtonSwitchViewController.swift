@@ -81,7 +81,9 @@ import SwiftUI
 
 struct SwitchViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonSwitchViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonSwitchViewController()
+        }
     }
 }
 #endif

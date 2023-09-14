@@ -142,7 +142,9 @@ import SwiftUI
 
 struct ButtonPullDownViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonPullDownViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonPullDownViewController()
+        }
     }
 }
 #endif

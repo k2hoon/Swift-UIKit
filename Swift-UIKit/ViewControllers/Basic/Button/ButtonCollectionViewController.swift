@@ -146,7 +146,9 @@ import SwiftUI
 
 struct ButtonCollectionViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonCollectionViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonCollectionViewController()
+        }
     }
 }
 #endif

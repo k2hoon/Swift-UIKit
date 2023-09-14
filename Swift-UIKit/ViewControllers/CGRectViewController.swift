@@ -126,7 +126,9 @@ import SwiftUI
 
 struct CGRectViewController_Preview: PreviewProvider {
     static var previews: some View {
-        CGRectViewController().toPreview()
+        UIViewControllerPreview {
+            CGRectViewController()
+        }
     }
 }
 #endif

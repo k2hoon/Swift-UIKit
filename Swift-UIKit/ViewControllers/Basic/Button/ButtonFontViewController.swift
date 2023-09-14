@@ -117,7 +117,9 @@ import SwiftUI
 
 struct ButtonFontViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonFontViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonFontViewController()
+        }
     }
 }
 #endif

@@ -39,7 +39,9 @@ import SwiftUI
 
 struct HomeTabViewController_Preview: PreviewProvider {
     static var previews: some View {
-        HomeTabViewController().toPreview()
+        UIViewControllerPreview {
+            HomeTabViewController()
+        }
     }
 }
 #endif

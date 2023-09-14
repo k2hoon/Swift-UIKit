@@ -67,7 +67,9 @@ import SwiftUI
 
 struct ButtonTypeViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonTypeViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonTypeViewController()
+        }
     }
 }
 #endif

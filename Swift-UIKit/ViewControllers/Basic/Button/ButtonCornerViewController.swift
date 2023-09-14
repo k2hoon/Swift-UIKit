@@ -74,7 +74,9 @@ import SwiftUI
 
 struct ButtonCornerViewController_Preview: PreviewProvider {
     static var previews: some View {
-        ButtonCornerViewController().toPreview()
+        UIViewControllerPreview {
+            ButtonCornerViewController()
+        }
     }
 }
 #endif

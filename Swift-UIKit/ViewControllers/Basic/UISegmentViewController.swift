@@ -77,7 +77,9 @@ import SwiftUI
 
 struct UISegmentViewController_Preview: PreviewProvider {
     static var previews: some View {
-        UISegmentViewController().toPreview()
+        UIViewControllerPreview {
+            UISegmentViewController()
+        }
     }
 }
 #endif
