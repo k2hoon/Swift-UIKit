@@ -8,30 +8,27 @@
 import UIKit
 
 class CustomTableViewController: UIViewController {
-    var customCells = [CustomCell]()
+    private var customCells = [CustomCell]()
     
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.dataSource = self
         table.delegate = self
         table.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
-        
-        // Because it is assumed that it is made in `Interface Builder`
-        // tableView.rowHeight = UITableView.automaticDimension
-        // tableView.estimatedRowHeight = 80
         return table
     }()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .white
-
-        //
+        self.view.backgroundColor = .systemBackground
         self.createCustomCells()
-        
+        self.layoutViews()
+    }
+    
+    private func layoutViews() {
         // set table view auto layout.
         self.view.addSubview(self.tableView)
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -42,18 +39,26 @@ class CustomTableViewController: UIViewController {
     }
     
     func createCustomCells() {
-        self.customCells.append(CustomCell(image: "app.fill", name: "AAA", title: "Hello, AAA"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "BBB", title: "Hello, BBB"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "CCC", title: "Hello, CCC"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "DDD", title: "Hello, DDD"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "EEE", title: "Hello, EEE"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "FFF", title: "Hello, FFF"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "GGG", title: "Hello, GGG"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "HHH", title: "Hello, HHH"))
-        self.customCells.append(CustomCell(image: "app.fill", name: "III", title: "Hello, III"))
+        self.customCells.append(CustomCell(title: "Hello, AAA", subtitle: "AAA", imageName: ""))
+        self.customCells.append(CustomCell(
+            title: "Hello, BBB",
+            subtitle: "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\nBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            imageName: "app.fill")
+        )
+        self.customCells.append(contentsOf: [
+            CustomCell(title: "Hello, CCC", subtitle: "CCC", imageName: "app.fill"),
+            CustomCell(title: "Hello, DDD", subtitle: "DDD", imageName: "app.fill"),
+            CustomCell(title: "Hello, EEE", subtitle: "EEE", imageName: "app.fill"),
+            CustomCell(title: "Hello, FFF", subtitle: "FFF", imageName: "app.fill"),
+            CustomCell(title: "Hello, GGG", subtitle: "GGG", imageName: "app.fill"),
+            CustomCell(title: "Hello, HHH", subtitle: "HHH", imageName: "app.fill"),
+            CustomCell(title: "Hello, III", subtitle: "III", imageName: "app.fill"),
+            CustomCell(title: "Hello, JJJ", subtitle: "JJJ", imageName: "app.fill"),
+        ])
     }
 }
 
+// MARK: - CustomTableViewController Table methods
 extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.customCells.count
@@ -61,14 +66,18 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
-        let custom = self.customCells[indexPath.row]
-        cell.item = custom
+        let item = self.customCells[indexPath.row]
+        cell.updateCellItem(item)
         cell.selectionStyle = .none
         return cell
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -76,3 +85,15 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct CustomTableViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        UIViewControllerPreview {
+            CustomTableViewController()
+        }
+    }
+}
+#endif
