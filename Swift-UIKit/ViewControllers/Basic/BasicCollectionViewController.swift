@@ -18,6 +18,9 @@ class BasicCollectionViewController: UIViewController {
         case segment
         case picker
         case alert
+        case stepper
+        case slider
+        case progress
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
@@ -30,6 +33,9 @@ class BasicCollectionViewController: UIViewController {
             case .segment: return ("Segment", UISegmentViewController())
             case .picker: return ("Picker", PickerInputViewController())
             case .alert: return ("Alert", AlertViewController())
+            case .stepper: return ("Stepper", StepperViewController())
+            case .slider: return ("Slider", SliderViewController())
+            case .progress: return ("Progress", ProgressViewController())
             }
         }
     }

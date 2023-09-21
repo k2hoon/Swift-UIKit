@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680A08FE2ABC7FD900EC1048 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */; };
 		6815D7DB2A3D0A9B0036983D /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */; };
 		6815D7DD2A3D0AF90036983D /* CGRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */; };
 		6815D7DF2A3D292B0036983D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DE2A3D292B0036983D /* UIScreen+.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectViewController.swift; sourceTree = "<group>"; };
 		6815D7DE2A3D292B0036983D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		680A08FF2ABC894A00EC1048 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		680A09002ABC895700EC1048 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				681DB1A72AB35F1D0034B8FD /* SliderViewController.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		680A09012ABC89CB00EC1048 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				684F50242A8EADEC0032985D /* UISegmentViewController.swift */,
+			);
+			path = Segment;
+			sourceTree = "<group>";
+		};
 		6815D7D92A3D0A7F0036983D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,9 +235,10 @@
 				6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */,
 				68602E632A829B4F001349C8 /* AlertViewController.swift */,
 				68F0D08E2A82A4A50021DD6D /* Picker */,
-				684F50242A8EADEC0032985D /* UISegmentViewController.swift */,
+				680A09012ABC89CB00EC1048 /* Segment */,
 				681DB1A62AB3574E0034B8FD /* Stepper */,
-				681DB1A72AB35F1D0034B8FD /* SliderViewController.swift */,
+				680A09002ABC895700EC1048 /* Slider */,
+				680A08FF2ABC894A00EC1048 /* Progress */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -470,6 +497,7 @@
 				68981E0529FEC8F30085B887 /* TestViewController.swift in Sources */,
 				68A588742A34DD8E00F0A8CD /* BasicCollectionViewController.swift in Sources */,
 				68665AF62A618E2C006120E0 /* CompisiteViewController.swift in Sources */,
+				680A08FE2ABC7FD900EC1048 /* ProgressViewController.swift in Sources */,
 				684F50212A8EAABF0032985D /* UILabel+.swift in Sources */,
 				68F2FFD3295DEF1C005A7737 /* Controller+DataSource.swift in Sources */,
 				686A13C32A8EB188005A9C0C /* LabelPaddingViewController.swift in Sources */,
