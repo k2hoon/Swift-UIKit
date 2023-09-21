@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		680A08FE2ABC7FD900EC1048 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */; };
+		680A09062ABCCA8300EC1048 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A09052ABCCA8300EC1048 /* CollectionViewCell.swift */; };
+		680A09082ABCCAB000EC1048 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A09072ABCCAB000EC1048 /* CollectionViewController.swift */; };
+		680A090A2ABCCAEC00EC1048 /* FlowHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A09092ABCCAEC00EC1048 /* FlowHeaderReusableView.swift */; };
+		680A090C2ABCCAFF00EC1048 /* FlowFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A090B2ABCCAFF00EC1048 /* FlowFooterReusableView.swift */; };
+		680A090E2ABCCCD400EC1048 /* CollectionCompositeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A090D2ABCCCD400EC1048 /* CollectionCompositeViewController.swift */; };
 		6815D7DB2A3D0A9B0036983D /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */; };
 		6815D7DD2A3D0AF90036983D /* CGRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */; };
 		6815D7DF2A3D292B0036983D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DE2A3D292B0036983D /* UIScreen+.swift */; };
@@ -81,6 +86,11 @@
 
 /* Begin PBXFileReference section */
 		680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		680A09052ABCCA8300EC1048 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		680A09072ABCCAB000EC1048 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		680A09092ABCCAEC00EC1048 /* FlowHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowHeaderReusableView.swift; sourceTree = "<group>"; };
+		680A090B2ABCCAFF00EC1048 /* FlowFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowFooterReusableView.swift; sourceTree = "<group>"; };
+		680A090D2ABCCCD400EC1048 /* CollectionCompositeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCompositeViewController.swift; sourceTree = "<group>"; };
 		6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectViewController.swift; sourceTree = "<group>"; };
 		6815D7DE2A3D292B0036983D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
@@ -206,6 +216,19 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		680A09042ABCCA4900EC1048 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				68665AF52A618E2C006120E0 /* CompisiteViewController.swift */,
+				680A09052ABCCA8300EC1048 /* CollectionViewCell.swift */,
+				680A09072ABCCAB000EC1048 /* CollectionViewController.swift */,
+				680A09092ABCCAEC00EC1048 /* FlowHeaderReusableView.swift */,
+				680A090B2ABCCAFF00EC1048 /* FlowFooterReusableView.swift */,
+				680A090D2ABCCCD400EC1048 /* CollectionCompositeViewController.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		6815D7D92A3D0A7F0036983D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,12 +266,12 @@
 			children = (
 				68A588732A34DD8E00F0A8CD /* BasicCollectionViewController.swift */,
 				68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */,
-				68665AF52A618E2C006120E0 /* CompisiteViewController.swift */,
 				6865017D2A3C65F200DF6562 /* Button */,
 				6865017E2A3C661C00DF6562 /* Label */,
 				689A186E2AA7CFFD00F4F065 /* TextField */,
 				68665AFB2A6199E1006120E0 /* Stack */,
 				680A09022ABC92F300EC1048 /* Table */,
+				680A09042ABCCA4900EC1048 /* Collection */,
 				680A09032ABC92FC00EC1048 /* Alert */,
 				68F0D08E2A82A4A50021DD6D /* Picker */,
 				680A09012ABC89CB00EC1048 /* Segment */,
@@ -528,6 +551,8 @@
 				684F501F2A8EAA4F0032985D /* TextFieldViewController.swift in Sources */,
 				68E3BB4B2A82858700874745 /* ButtonTypeViewController.swift in Sources */,
 				684F501B2A8EA0D90032985D /* ButtonPullDownViewController.swift in Sources */,
+				680A09082ABCCAB000EC1048 /* CollectionViewController.swift in Sources */,
+				680A090C2ABCCAFF00EC1048 /* FlowFooterReusableView.swift in Sources */,
 				681DB1AA2AB35FBC0034B8FD /* UIColor+.swift in Sources */,
 				68A588762A34E5DF00F0A8CD /* LabelViewController.swift in Sources */,
 				684F501D2A8EA78A0032985D /* ButtonContextMenuViewController.swift in Sources */,
@@ -543,13 +568,16 @@
 				683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */,
 				684F50172A8E9C9D0032985D /* ButtonSwitchViewController.swift in Sources */,
 				68665AF22A618134006120E0 /* UIControl+.swift in Sources */,
+				680A090A2ABCCAEC00EC1048 /* FlowHeaderReusableView.swift in Sources */,
 				684F50192A8EA0BF0032985D /* ButtonPopUpViewController.swift in Sources */,
 				68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */,
 				6815D7DF2A3D292B0036983D /* UIScreen+.swift in Sources */,
 				684F50232A8EAB720032985D /* UITextField+.swift in Sources */,
 				68E3BB4F2A828E1800874745 /* ButtonFontViewController.swift in Sources */,
+				680A09062ABCCA8300EC1048 /* CollectionViewCell.swift in Sources */,
 				681DB1A82AB35F1D0034B8FD /* SliderViewController.swift in Sources */,
 				68981E0729FEC9000085B887 /* SettingsViewController.swift in Sources */,
+				680A090E2ABCCCD400EC1048 /* CollectionCompositeViewController.swift in Sources */,
 				6815D7E32A3D4BC60036983D /* CustomTableViewController.swift in Sources */,
 				688F36282A362ACD00518039 /* LabelScrollViewController.swift in Sources */,
 				686A13C52A8EB1BA005A9C0C /* LabelCollectionViewController.swift in Sources */,
