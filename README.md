@@ -18,10 +18,10 @@
 - [x] TextField
 - [x] TableView
 - [ ] CollectionView
-- [ ] StackView
-- [ ] Progress
-- [ ] Slider
-- [ ] Stepper
+- [x] StackView
+- [x] Progress
+- [x] Slider
+- [x] Stepper
 - [ ] PageControl
 - [x] Segment
 - [x] Picker
