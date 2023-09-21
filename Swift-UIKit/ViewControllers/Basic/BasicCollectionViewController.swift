@@ -14,7 +14,8 @@ class BasicCollectionViewController: UIViewController {
         case button
         case vstack
         case hstack
-        case tableview
+        case table
+        case customTable
         case segment
         case picker
         case alert
@@ -29,7 +30,8 @@ class BasicCollectionViewController: UIViewController {
             case .button: return ("Button", ButtonCollectionViewController())
             case .vstack: return ("VStack", VStackViewController())
             case .hstack: return ("HStack", HStackViewController())
-            case .tableview: return ("Table", TableViewController())
+            case .table: return ("Table", TableViewController())
+            case .customTable: return ("Custom Table", CustomTableViewController())
             case .segment: return ("Segment", UISegmentViewController())
             case .picker: return ("Picker", PickerInputViewController())
             case .alert: return ("Alert", AlertViewController())

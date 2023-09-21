@@ -188,6 +188,24 @@
 			path = Segment;
 			sourceTree = "<group>";
 		};
+		680A09022ABC92F300EC1048 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				6815D7E02A3D4B7A0036983D /* TableViewController.swift */,
+				6815D7E22A3D4BC60036983D /* CustomTableViewController.swift */,
+				6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		680A09032ABC92FC00EC1048 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				68602E632A829B4F001349C8 /* AlertViewController.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		6815D7D92A3D0A7F0036983D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,10 +248,8 @@
 				6865017E2A3C661C00DF6562 /* Label */,
 				689A186E2AA7CFFD00F4F065 /* TextField */,
 				68665AFB2A6199E1006120E0 /* Stack */,
-				6815D7E02A3D4B7A0036983D /* TableViewController.swift */,
-				6815D7E22A3D4BC60036983D /* CustomTableViewController.swift */,
-				6815D7E42A3D4BE50036983D /* CustomTableViewCell.swift */,
-				68602E632A829B4F001349C8 /* AlertViewController.swift */,
+				680A09022ABC92F300EC1048 /* Table */,
+				680A09032ABC92FC00EC1048 /* Alert */,
 				68F0D08E2A82A4A50021DD6D /* Picker */,
 				680A09012ABC89CB00EC1048 /* Segment */,
 				681DB1A62AB3574E0034B8FD /* Stepper */,
