@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		680A08FE2ABC7FD900EC1048 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */; };
+		680A09102ABCCDA900EC1048 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A090F2ABCCDA900EC1048 /* PageViewController.swift */; };
 		6815D7DB2A3D0A9B0036983D /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */; };
 		6815D7DD2A3D0AF90036983D /* CGRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */; };
 		6815D7DF2A3D292B0036983D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DE2A3D292B0036983D /* UIScreen+.swift */; };
@@ -34,6 +35,8 @@
 		68665AF62A618E2C006120E0 /* CompisiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF52A618E2C006120E0 /* CompisiteViewController.swift */; };
 		68665AF82A6193E2006120E0 /* HStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF72A6193E2006120E0 /* HStackViewController.swift */; };
 		68665AFA2A6199DC006120E0 /* VStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF92A6199DC006120E0 /* VStackViewController.swift */; };
+		6866EBDF2ABE08D600E16F02 /* ScrollPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6866EBDE2ABE08D600E16F02 /* ScrollPageViewController.swift */; };
+		6866EBE12ABE277200E16F02 /* StackPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6866EBE02ABE277200E16F02 /* StackPageViewController.swift */; };
 		686A13C32A8EB188005A9C0C /* LabelPaddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A13C22A8EB188005A9C0C /* LabelPaddingViewController.swift */; };
 		686A13C52A8EB1BA005A9C0C /* LabelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A13C42A8EB1BA005A9C0C /* LabelCollectionViewController.swift */; };
 		688F36282A362ACD00518039 /* LabelScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688F36272A362ACD00518039 /* LabelScrollViewController.swift */; };
@@ -81,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		680A090F2ABCCDA900EC1048 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectViewController.swift; sourceTree = "<group>"; };
 		6815D7DE2A3D292B0036983D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		68665AF52A618E2C006120E0 /* CompisiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompisiteViewController.swift; sourceTree = "<group>"; };
 		68665AF72A6193E2006120E0 /* HStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackViewController.swift; sourceTree = "<group>"; };
 		68665AF92A6199DC006120E0 /* VStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackViewController.swift; sourceTree = "<group>"; };
+		6866EBDE2ABE08D600E16F02 /* ScrollPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageViewController.swift; sourceTree = "<group>"; };
+		6866EBE02ABE277200E16F02 /* StackPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackPageViewController.swift; sourceTree = "<group>"; };
 		686A13C22A8EB188005A9C0C /* LabelPaddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPaddingViewController.swift; sourceTree = "<group>"; };
 		686A13C42A8EB1BA005A9C0C /* LabelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewController.swift; sourceTree = "<group>"; };
 		688F36272A362ACD00518039 /* LabelScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelScrollViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +212,16 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		680A09112ABCCDAD00EC1048 /* pagecontrol */ = {
+			isa = PBXGroup;
+			children = (
+				680A090F2ABCCDA900EC1048 /* PageViewController.swift */,
+				6866EBDE2ABE08D600E16F02 /* ScrollPageViewController.swift */,
+				6866EBE02ABE277200E16F02 /* StackPageViewController.swift */,
+			);
+			path = pagecontrol;
+			sourceTree = "<group>";
+		};
 		6815D7D92A3D0A7F0036983D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +271,7 @@
 				681DB1A62AB3574E0034B8FD /* Stepper */,
 				680A09002ABC895700EC1048 /* Slider */,
 				680A08FF2ABC894A00EC1048 /* Progress */,
+				680A09112ABCCDAD00EC1048 /* pagecontrol */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -525,6 +542,7 @@
 				68F0D08D2A82A49F0021DD6D /* PickerInputViewController.swift in Sources */,
 				6815D7DB2A3D0A9B0036983D /* PreviewProvider.swift in Sources */,
 				68665AFA2A6199DC006120E0 /* VStackViewController.swift in Sources */,
+				680A09102ABCCDA900EC1048 /* PageViewController.swift in Sources */,
 				684F501F2A8EAA4F0032985D /* TextFieldViewController.swift in Sources */,
 				68E3BB4B2A82858700874745 /* ButtonTypeViewController.swift in Sources */,
 				684F501B2A8EA0D90032985D /* ButtonPullDownViewController.swift in Sources */,
@@ -537,6 +555,7 @@
 				68E3BB512A82928600874745 /* ButtonCornerViewController.swift in Sources */,
 				68981E0929FEC90F0085B887 /* HomeTabViewController.swift in Sources */,
 				681DB1A52AB3574A0034B8FD /* StepperViewController.swift in Sources */,
+				6866EBE12ABE277200E16F02 /* StackPageViewController.swift in Sources */,
 				68F0D08B2A829FD90021DD6D /* PickerViewController.swift in Sources */,
 				6815D7E12A3D4B7A0036983D /* TableViewController.swift in Sources */,
 				684F50252A8EADEC0032985D /* UISegmentViewController.swift in Sources */,
@@ -551,6 +570,7 @@
 				681DB1A82AB35F1D0034B8FD /* SliderViewController.swift in Sources */,
 				68981E0729FEC9000085B887 /* SettingsViewController.swift in Sources */,
 				6815D7E32A3D4BC60036983D /* CustomTableViewController.swift in Sources */,
+				6866EBDF2ABE08D600E16F02 /* ScrollPageViewController.swift in Sources */,
 				688F36282A362ACD00518039 /* LabelScrollViewController.swift in Sources */,
 				686A13C52A8EB1BA005A9C0C /* LabelCollectionViewController.swift in Sources */,
 				68F2FFD7295DF87B005A7737 /* ReminderViewController+Section.swift in Sources */,
