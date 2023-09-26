@@ -266,14 +266,14 @@
 			path = Stepper;
 			sourceTree = "<group>";
 		};
-		6865017B2A3C657F00DF6562 /* ViewControllers */ = {
+		6865017B2A3C657F00DF6562 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				68981E0829FEC90F0085B887 /* HomeTabViewController.swift */,
 				6865017C2A3C65DA00DF6562 /* Basic */,
 				6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6865017C2A3C65DA00DF6562 /* Basic */ = {
@@ -410,7 +410,7 @@
 				68F2FFA3295DE027005A7737 /* Assets.xcassets */,
 				68F2FFA5295DE027005A7737 /* LaunchScreen.storyboard */,
 				68F2FFA8295DE027005A7737 /* Info.plist */,
-				6865017B2A3C657F00DF6562 /* ViewControllers */,
+				6865017B2A3C657F00DF6562 /* Views */,
 				68981E0429FEC8F30085B887 /* TestViewController.swift */,
 				68981E0629FEC9000085B887 /* SettingsViewController.swift */,
 				6890A8BC2A1AB009004D619F /* AdvancedViewController.swift */,
