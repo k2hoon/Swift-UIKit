@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		680A08FE2ABC7FD900EC1048 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */; };
-		680A09062ABCCA8300EC1048 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A09052ABCCA8300EC1048 /* CollectionViewCell.swift */; };
-		680A09082ABCCAB000EC1048 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A09072ABCCAB000EC1048 /* CollectionViewController.swift */; };
-		680A090A2ABCCAEC00EC1048 /* CollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A09092ABCCAEC00EC1048 /* CollectionHeaderReusableView.swift */; };
-		680A090C2ABCCAFF00EC1048 /* CollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A090B2ABCCAFF00EC1048 /* CollectionFooterReusableView.swift */; };
-		680A090E2ABCCCD400EC1048 /* CollectionCompositeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A090D2ABCCCD400EC1048 /* CollectionCompositeViewController.swift */; };
 		680A09102ABCCDA900EC1048 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A090F2ABCCDA900EC1048 /* PageViewController.swift */; };
 		6815D7DB2A3D0A9B0036983D /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */; };
 		6815D7DD2A3D0AF90036983D /* CGRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */; };
@@ -37,6 +32,7 @@
 		68602E642A829B4F001349C8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68602E632A829B4F001349C8 /* AlertViewController.swift */; };
 		68665AF02A60FD4C006120E0 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */; };
 		68665AF22A618134006120E0 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF12A618134006120E0 /* UIControl+.swift */; };
+		68665AF62A618E2C006120E0 /* CompisiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF52A618E2C006120E0 /* CompisiteViewController.swift */; };
 		68665AF82A6193E2006120E0 /* HStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF72A6193E2006120E0 /* HStackViewController.swift */; };
 		68665AFA2A6199DC006120E0 /* VStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68665AF92A6199DC006120E0 /* VStackViewController.swift */; };
 		6866EBDF2ABE08D600E16F02 /* ScrollPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6866EBDE2ABE08D600E16F02 /* ScrollPageViewController.swift */; };
@@ -54,8 +50,6 @@
 		68E3BB4D2A828D6F00874745 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3BB4C2A828D6F00874745 /* UIViewController+.swift */; };
 		68E3BB4F2A828E1800874745 /* ButtonFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3BB4E2A828E1800874745 /* ButtonFontViewController.swift */; };
 		68E3BB512A82928600874745 /* ButtonCornerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3BB502A82928600874745 /* ButtonCornerViewController.swift */; };
-		68E81C302AC35F1200D1CBEC /* CollectionViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E81C2F2AC35F1200D1CBEC /* CollectionViewController+.swift */; };
-		68E81C352AC3687400D1CBEC /* CollectionCompositeViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E81C342AC3687400D1CBEC /* CollectionCompositeViewController+.swift */; };
 		68F0D08B2A829FD90021DD6D /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0D08A2A829FD90021DD6D /* PickerViewController.swift */; };
 		68F0D08D2A82A49F0021DD6D /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0D08C2A82A49F0021DD6D /* PickerInputViewController.swift */; };
 		68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2FF9A295DE025005A7737 /* AppDelegate.swift */; };
@@ -90,11 +84,6 @@
 
 /* Begin PBXFileReference section */
 		680A08FD2ABC7FD900EC1048 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
-		680A09052ABCCA8300EC1048 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		680A09072ABCCAB000EC1048 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		680A09092ABCCAEC00EC1048 /* CollectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderReusableView.swift; sourceTree = "<group>"; };
-		680A090B2ABCCAFF00EC1048 /* CollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterReusableView.swift; sourceTree = "<group>"; };
-		680A090D2ABCCCD400EC1048 /* CollectionCompositeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCompositeViewController.swift; sourceTree = "<group>"; };
 		680A090F2ABCCDA900EC1048 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		6815D7DA2A3D0A9B0036983D /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		6815D7DC2A3D0AF90036983D /* CGRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +108,7 @@
 		68602E632A829B4F001349C8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
 		68665AF12A618134006120E0 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
+		68665AF52A618E2C006120E0 /* CompisiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompisiteViewController.swift; sourceTree = "<group>"; };
 		68665AF72A6193E2006120E0 /* HStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackViewController.swift; sourceTree = "<group>"; };
 		68665AF92A6199DC006120E0 /* VStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackViewController.swift; sourceTree = "<group>"; };
 		6866EBDE2ABE08D600E16F02 /* ScrollPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageViewController.swift; sourceTree = "<group>"; };
@@ -136,8 +126,6 @@
 		68E3BB4C2A828D6F00874745 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		68E3BB4E2A828E1800874745 /* ButtonFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFontViewController.swift; sourceTree = "<group>"; };
 		68E3BB502A82928600874745 /* ButtonCornerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCornerViewController.swift; sourceTree = "<group>"; };
-		68E81C2F2AC35F1200D1CBEC /* CollectionViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController+.swift"; sourceTree = "<group>"; };
-		68E81C342AC3687400D1CBEC /* CollectionCompositeViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionCompositeViewController+.swift"; sourceTree = "<group>"; };
 		68F0D08A2A829FD90021DD6D /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		68F0D08C2A82A49F0021DD6D /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
 		68F2FF97295DE025005A7737 /* Swift-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,16 +212,6 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		680A09042ABCCA4900EC1048 /* Collection */ = {
-			isa = PBXGroup;
-			children = (
-				68E81C322AC3683D00D1CBEC /* Common */,
-				68E81C312AC35F9400D1CBEC /* FlowLayout */,
-				68E81C332AC3684B00D1CBEC /* ComposionalLayout */,
-			);
-			path = Collection;
-			sourceTree = "<group>";
-		};
 		680A09112ABCCDAD00EC1048 /* pagecontrol */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,12 +259,12 @@
 			children = (
 				68A588732A34DD8E00F0A8CD /* BasicCollectionViewController.swift */,
 				68665AEF2A60FD4C006120E0 /* BasicCollectionViewCell.swift */,
+				68665AF52A618E2C006120E0 /* CompisiteViewController.swift */,
 				6865017D2A3C65F200DF6562 /* Button */,
 				6865017E2A3C661C00DF6562 /* Label */,
 				689A186E2AA7CFFD00F4F065 /* TextField */,
 				68665AFB2A6199E1006120E0 /* Stack */,
 				680A09022ABC92F300EC1048 /* Table */,
-				680A09042ABCCA4900EC1048 /* Collection */,
 				680A09032ABC92FC00EC1048 /* Alert */,
 				68F0D08E2A82A4A50021DD6D /* Picker */,
 				680A09012ABC89CB00EC1048 /* Segment */,
@@ -341,34 +319,6 @@
 				684F501E2A8EAA4F0032985D /* TextFieldViewController.swift */,
 			);
 			path = TextField;
-			sourceTree = "<group>";
-		};
-		68E81C312AC35F9400D1CBEC /* FlowLayout */ = {
-			isa = PBXGroup;
-			children = (
-				680A09072ABCCAB000EC1048 /* CollectionViewController.swift */,
-				68E81C2F2AC35F1200D1CBEC /* CollectionViewController+.swift */,
-			);
-			path = FlowLayout;
-			sourceTree = "<group>";
-		};
-		68E81C322AC3683D00D1CBEC /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				680A09052ABCCA8300EC1048 /* CollectionViewCell.swift */,
-				680A09092ABCCAEC00EC1048 /* CollectionHeaderReusableView.swift */,
-				680A090B2ABCCAFF00EC1048 /* CollectionFooterReusableView.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		68E81C332AC3684B00D1CBEC /* ComposionalLayout */ = {
-			isa = PBXGroup;
-			children = (
-				680A090D2ABCCCD400EC1048 /* CollectionCompositeViewController.swift */,
-				68E81C342AC3687400D1CBEC /* CollectionCompositeViewController+.swift */,
-			);
-			path = ComposionalLayout;
 			sourceTree = "<group>";
 		};
 		68F0D08E2A82A4A50021DD6D /* Picker */ = {
@@ -579,6 +529,7 @@
 			files = (
 				68981E0529FEC8F30085B887 /* TestViewController.swift in Sources */,
 				68A588742A34DD8E00F0A8CD /* BasicCollectionViewController.swift in Sources */,
+				68665AF62A618E2C006120E0 /* CompisiteViewController.swift in Sources */,
 				680A08FE2ABC7FD900EC1048 /* ProgressViewController.swift in Sources */,
 				684F50212A8EAABF0032985D /* UILabel+.swift in Sources */,
 				68F2FFD3295DEF1C005A7737 /* Controller+DataSource.swift in Sources */,
@@ -595,8 +546,6 @@
 				684F501F2A8EAA4F0032985D /* TextFieldViewController.swift in Sources */,
 				68E3BB4B2A82858700874745 /* ButtonTypeViewController.swift in Sources */,
 				684F501B2A8EA0D90032985D /* ButtonPullDownViewController.swift in Sources */,
-				680A09082ABCCAB000EC1048 /* CollectionViewController.swift in Sources */,
-				680A090C2ABCCAFF00EC1048 /* CollectionFooterReusableView.swift in Sources */,
 				681DB1AA2AB35FBC0034B8FD /* UIColor+.swift in Sources */,
 				68A588762A34E5DF00F0A8CD /* LabelViewController.swift in Sources */,
 				684F501D2A8EA78A0032985D /* ButtonContextMenuViewController.swift in Sources */,
@@ -613,19 +562,14 @@
 				683093B0296C7FDF00A7228A /* ButtonViewController.swift in Sources */,
 				684F50172A8E9C9D0032985D /* ButtonSwitchViewController.swift in Sources */,
 				68665AF22A618134006120E0 /* UIControl+.swift in Sources */,
-				680A090A2ABCCAEC00EC1048 /* CollectionHeaderReusableView.swift in Sources */,
-				68E81C352AC3687400D1CBEC /* CollectionCompositeViewController+.swift in Sources */,
 				684F50192A8EA0BF0032985D /* ButtonPopUpViewController.swift in Sources */,
 				68F2FF9B295DE025005A7737 /* AppDelegate.swift in Sources */,
 				6815D7DF2A3D292B0036983D /* UIScreen+.swift in Sources */,
 				684F50232A8EAB720032985D /* UITextField+.swift in Sources */,
 				68E3BB4F2A828E1800874745 /* ButtonFontViewController.swift in Sources */,
-				680A09062ABCCA8300EC1048 /* CollectionViewCell.swift in Sources */,
 				681DB1A82AB35F1D0034B8FD /* SliderViewController.swift in Sources */,
 				68981E0729FEC9000085B887 /* SettingsViewController.swift in Sources */,
-				680A090E2ABCCCD400EC1048 /* CollectionCompositeViewController.swift in Sources */,
 				6815D7E32A3D4BC60036983D /* CustomTableViewController.swift in Sources */,
-				68E81C302AC35F1200D1CBEC /* CollectionViewController+.swift in Sources */,
 				6866EBDF2ABE08D600E16F02 /* ScrollPageViewController.swift in Sources */,
 				688F36282A362ACD00518039 /* LabelScrollViewController.swift in Sources */,
 				686A13C52A8EB1BA005A9C0C /* LabelCollectionViewController.swift in Sources */,
