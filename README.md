@@ -17,12 +17,12 @@
 - [x] Toggle Button
 - [x] TextField
 - [x] TableView
-- [ ] CollectionView
+- [x] CollectionView
 - [x] StackView
 - [x] Progress
 - [x] Slider
 - [x] Stepper
-- [ ] PageControl
+- [x] PageControl
 - [x] Segment
 - [x] Picker
 - [x] Alert
