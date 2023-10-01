@@ -22,6 +22,7 @@ class BasicCollectionViewController: UIViewController {
         case stepper
         case slider
         case progress
+        case search
         
         var viewValue: (title: String, vc: UIViewController) {
             switch self {
@@ -38,6 +39,7 @@ class BasicCollectionViewController: UIViewController {
             case .stepper: return ("Stepper", StepperViewController())
             case .slider: return ("Slider", SliderViewController())
             case .progress: return ("Progress", ProgressViewController())
+            case .search: return ("Search", SearchCollections())
             }
         }
     }
@@ -107,7 +109,7 @@ extension BasicCollectionViewController: UICollectionViewDelegate, UICollectionV
         let viewType = self.dataSource[indexPath.item]
         cell.setLabel(text: viewType.viewValue.title)
         cell.button.addAction { [weak self] in
-            if viewType == .button || viewType == .label {
+            if viewType == .button || viewType == .label || viewType == .search {
                 let vc = UINavigationController(rootViewController: viewType.viewValue.vc)
                 vc.modalPresentationStyle = .fullScreen
                 self?.present(vc, animated: true)
